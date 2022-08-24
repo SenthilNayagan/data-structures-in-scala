@@ -20,6 +20,5 @@ val fruits: Array[String] = Array("Apple", "Orange", "Banana", "Mango")
 
 fruits.exists(x => x == "Orange")
 fruits.exists(x => x == "Pineapple")
-
-
+fruits.exists(_ == "Orange")
 
