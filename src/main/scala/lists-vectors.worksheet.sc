@@ -15,6 +15,10 @@ myFruits.filter(_ == "banana")
 // Any insertion at the end of the list, the complexity becomes O(n).
 // Deletion = O(n)
 
+val myPets: List[String] = List("cat", "dog", "goat", "horse")
+
+myPets groupBy {x => x.length} // Produces a Map[Int, List[String]]
+
 //=============
 // Vectors
 //=============
@@ -29,9 +33,20 @@ myFruitsVec.sorted // Sort operation
 
 val myVegatables: Vector[String] = Vector("beetroot", "corn", "avocado")
 
-myFruits ++ myFruitsVec // When concatenating a List and a Vector, the return type is alway List
+myFruits ++ myFruitsVec // When concatenating a list and a vector, the return type is always a list
 
 // Concatenating two Vectors
 myFruitsVec ++ myVegatables
 
 myVegatables.filter(_ == "corn")
+
+// Vector - Advantages
+// When we filter for a particular element, it doesn’t have to traverse all the elements of the vector.
+
+// Trie structure
+// Trie is a tree data structure used for storing collections of strings.
+// It's also called digital tree or prefix tree.
+// We can do prefix-based search.
+// Compare to hash table: Hash table takes more space than the trie.
+
+myFruitsVec groupBy {x => x.length} // Produces a Map[Int, Vector[String]]
