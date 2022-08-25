@@ -23,3 +23,6 @@ fruits.exists(x => x == "Pineapple")
 fruits.exists(_ == "Orange")
 
 fruits groupBy {x => x.length} // Produces a Map[Int, Array[String]]
+
+// Range
+val x = (1 to 5).toArray

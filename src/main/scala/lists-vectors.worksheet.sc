@@ -57,3 +57,45 @@ myVegatables.filter(_ == "corn")
 // Compare to hash table: Hash table takes more space than the trie.
 
 myFruitsVec groupBy {x => x.length} // Produces a Map[Int, Vector[String]]
+
+// Range
+val y = (1 to 5).toList
+val g = List.range(1, 10, 3)
+
+// List's functional methods, meaning that they don’t mutate the collection they’re called on, but instead return a new collection with the updated elements.
+val a = List(10, 20, 30, 40, 10)      // List(10, 20, 30, 40, 10)
+
+a.drop(2)                             // List(30, 40, 10); Drop left
+a.dropWhile(_ < 25)                   // List(30, 40, 10)
+a.filter(_ < 25)                      // List(10, 20, 10)
+a.slice(2,4)                          // List(30, 40); (from, until)
+a.tail                                // List(20, 30, 40, 10)
+a.take(3)                             // List(10, 20, 30)
+a.takeWhile(_ < 30)                  // List(10, 20)
+a.dropRight(2)
+
+// map, flatmap
+// The map method steps through each element in the existing list, applying
+// the function we supply to each element, one at a time; it then returns a new list with all of the modified elements.
+myVegatables.map(_.length)
+myVegatables.map(_.toUpperCase)
+
+val nums = (1 to 10).toList
+
+nums.reduceLeft(_ + _)
+nums.foldLeft(10)(_ + _)
+
+// Higher-order functions
+a.filter((i: Int) => i < 30)
+a.filter((i) => i < 25)
+a.filter(i => i < 25)
+a.filter(_ < 25)
+
+a.filter(_ < 25).map(_ * 2)
+
+// Tail - It’s used to print every element in a list after the head element.
+"Senthil".head
+"Senthil".tail
+
+val emptyList = List[Int]()   // emptyList: List[Int] = List()
+emptyList.headOption
