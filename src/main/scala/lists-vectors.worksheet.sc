@@ -19,6 +19,13 @@ val myPets: List[String] = List("cat", "dog", "goat", "horse")
 
 myPets groupBy {x => x.length} // Produces a Map[Int, List[String]]
 
+var hetroList = List("one", 1)
+hetroList(0)
+hetroList(1)
+hetroList = hetroList.updated(0, "two")
+hetroList
+hetroList.head
+hetroList.tail
 //=============
 // Vectors
 //=============
