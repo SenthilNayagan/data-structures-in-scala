@@ -49,6 +49,13 @@ numbers.reduceLeft(_+_)
 numbers.reduce(_+_)
 numbers.reduceRight(_+_)
 
+// Sum consecutive numbers
+numbers.length
+numbers.length * (numbers.length + 1) /2
+
 // Find the index of an element
 numbers.indexOf(2)
 numbers.lastIndexOf(2)
+
+// Find a max element
+numbers.max
