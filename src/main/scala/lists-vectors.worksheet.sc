@@ -64,6 +64,7 @@ val g = List.range(1, 10, 3)
 
 // List's functional methods, meaning that they don’t mutate the collection they’re called on, but instead return a new collection with the updated elements.
 val a = List(10, 20, 30, 40, 10)      // List(10, 20, 30, 40, 10)
+a.foreach(println)
 
 a.drop(2)                             // List(30, 40, 10); Drop left
 a.dropWhile(_ < 25)                   // List(30, 40, 10)
@@ -73,6 +74,7 @@ a.tail                                // List(20, 30, 40, 10)
 a.take(3)                             // List(10, 20, 30)
 a.takeWhile(_ < 30)                  // List(10, 20)
 a.dropRight(2)
+a.drop(Int.MaxValue)
 
 // map, flatmap
 // The map method steps through each element in the existing list, applying

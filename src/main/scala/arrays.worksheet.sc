@@ -26,3 +26,29 @@ fruits groupBy {x => x.length} // Produces a Map[Int, Array[String]]
 
 // Range
 val x = (1 to 5).toArray
+
+// Appending elements
+numbers :+ 2
+fruits :+ "Papaya"
+
+//-------------
+// ArrayBuffer
+//-------------
+// Like Array, ArrayBuffer is mutable. Also, it's resizable unlike Array.
+import scala.collection.mutable.ArrayBuffer
+// Define empty ArrayBuffer
+var strings = ArrayBuffer[String]()
+var ints = ArrayBuffer[Int]()
+
+// To create a new ArrayBuffer with initial elements
+val buf = ArrayBuffer(1, 2, 3, 5)
+
+// Sum operation
+numbers.foldLeft(0)(_+_)
+numbers.reduceLeft(_+_)
+numbers.reduce(_+_)
+numbers.reduceRight(_+_)
+
+// Find the index of an element
+numbers.indexOf(2)
+numbers.lastIndexOf(2)
